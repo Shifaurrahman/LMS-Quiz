@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+<div class="main-outer">
+    <div class="inner-wrapper container">
+        <div class="top-title-wrapper">
+            <h1>My First Java Project</h1>
+        </div>
+        <hr>
+
+        <div class="controller-wrapper">
+            <div class="controller-item">
+                <div class="item-inner" style="padding: 0;">
+                  <select  id="level-select" class="foam-control" style="width: 100%;">
+                    <option value="1">Easy</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Hard</option>
+                  </select>
+                </div>
+            </div>
+            <div class="controller-item">
+                <div class="item-inner">
+                    <span>Time :
+                        <span id="min">00</span> :
+                        <span id="sec">00</span>
+                    </span>
+                </div>
+            </div>
+            <div class="controller-item">
+                <div class="item-inner">
+                    <span>Question : <span id="qnumber">0</span>/10</span>
+                </div>
+            </div>
+            <div class="controller-item">
+                <div class="item-inner">
+                    <span style="white-space: nowrap;">Result : (C:<span id="c">0</span>) | (W:<span id="w">0</span>) | (S:<span id="s">0</span>)</span>
+                </div>
+            </div>
+            <div class="controller-item">
+                <div class="item-inner" style="padding: 0;">
+                   <button onclick="start()" class="btn btn-primary" style="width: 100%;"id="btn-start">Strart</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="playground">
+            <h2 class="question">
+                <span id="f-number">?</span>&nbsp;
+                <span id="op">?</span>&nbsp;
+                <span id="l-number">?</span>&nbsp
+                = &nbsp;
+                <span class="answer">?</span>
+            </h2>
+            <input type="number" id="answer" class="foam-control"
+            placeholder="Answer Here" style="width: 200px;">
+        </div>
+        <div class="button-bar">
+            <div class="btn btn-outline-danger" onclick="reset()">Reset</div>&nbsp;
+            <div class="btn btn-outline-dark" onclick="skipQuiz()">Skip</div>&nbsp;
+            <div class="btn btn-primary" onclick="submitData()">Submit</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>First Nubmer</th>
+                    <th>Last Nubmer</th>
+                    <th>Operator</th>
+                    <th>Correct Answer</th>
+                    <th>User Answer</th>
+                    <th>Is Correct</th>
+                    <th>Is Skipped</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody id="answer-body">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
